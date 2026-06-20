@@ -65,3 +65,64 @@ Decide que debe ejecutar
 ***Debe poder forzarse a usar un algoritmo especifico***
 
 El sabe que: existen las pilas y las operaciones
+
+# Sistema de carpetas
+```
+push_swap/
+│
+├── Makefile
+├── include/
+│   ├── push_swap.h
+│   ├── stack.h
+│   ├── parser.h
+│   ├── operations.h
+│   ├── algorithm.h
+│   └── error.h
+│
+├── src/
+│   ├── main/
+│   │   └── main.c
+│   │
+│   ├── parser/
+│   │   ├── parser.c
+│   │   ├── validation.c
+│   │   ├── duplicates.c
+│   │   └── normalization.c
+│   │
+│   ├── stack/
+│   │   ├── stack_init.c
+│   │   ├── stack_utils.c
+│   │   ├── stack_free.c
+│   │   └── stack_size.c
+│   │
+│   ├── operations/
+│   │   ├── swap.c
+│   │   ├── push.c
+│   │   ├── rotate.c
+│   │   └── reverse_rotate.c
+│   │
+│   ├── algorithm/
+│   │   ├── sort_small.c
+│   │   ├── radix.c
+│   │   ├── cost.c
+│   │   ├── target.c
+│   │   ├── move.c
+│   │   └── algorithm.c
+│   │
+│   ├── utils/
+│   │   ├── ft_error.c
+│   │   └── ft_exit.c
+│   │
+│   └── checker_bonus/
+│       ├── checker.c
+│       └── checker_utils.c
+│
+├── tests/
+│
+├── docs/
+│   ├── roadmap.md
+│   ├── algorithms.md
+│   └── notes.md
+│
+└── libft/
+```
