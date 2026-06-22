@@ -13,4 +13,18 @@
 #include "../../include/stack.h"
 #include "../../include/libraries.h"
 
+void	ft_free_stack(t_stack *stack){
+	t_node	*tmp;
+	int		i;
 
+	tmp = stack->top;
+	i = 0;
+	while (i <= stack->size)
+	{
+		tmp = tmp->next;
+		free(stack->top);
+		stack->top = tmp;
+		i++;
+	}
+	free(stack);
+}

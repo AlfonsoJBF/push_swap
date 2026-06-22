@@ -47,5 +47,6 @@ int main(void)
 		i++;
 	}
 	print_stack(a);
+	ft_free_stack(a);
 	return (0);
 }
