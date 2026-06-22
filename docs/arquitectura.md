@@ -39,6 +39,7 @@ Seria como el apartado de las linked lists en la libft
 ### Prohibiciones
 - No define los movimientos permitidos
 - No calcula ni normaliza valores
+
 ## PARSING
 Transforma y normaliza los argumentos recibidos y los devuelve con un formato adecuado.
 
@@ -126,3 +127,15 @@ push_swap/
 │
 └── libft/
 ```
+
+# CORE LOOP
+
+programa parametros:
+	parsear los datos
+	levantar dos stacks
+	llenar stack a con los datos
+	iniciar la resolucion:
+		calcular tamaño
+		calcular desorden
+		elegir algoritmo
+		ejecutar algoritmo

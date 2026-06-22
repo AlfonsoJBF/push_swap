@@ -27,7 +27,5 @@ typedef struct s_stack
 | `pos`        | posición actual   | algoritmo         | temporal            |
 | `target_pos` | destino ideal     | algoritmo?        | temporal            |
 | `next`       | enlace lista      | stack engine      | infraestructura     |
-| `a`          | top de A          | operations        | estado global       |
-| `b`          | top de B          | operations        | estado global       |
-| `size_a`     | tamaño A          | operations        | caché               |
-| `size_b`     | tamaño B          | operations        | caché               |
+| `top`        | top del stack     | operations        | estado global       |
+| `size`       | tamaño            | operations        | caché               |
