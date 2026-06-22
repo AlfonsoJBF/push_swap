@@ -86,3 +86,5 @@ Buscas el elemento mas pequeño de la parte no ordenada y lo inserta en su posic
 ### Merge Sort
 ### Turk Algorithm
 
+
+

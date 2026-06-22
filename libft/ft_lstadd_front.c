@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_addbck.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/21 01:08:34 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/21 02:25:09 by albustos         ###   ########.fr       */
+/*   Created: 2026/05/25 20:16:31 by albustos          #+#    #+#             */
+/*   Updated: 2026/05/26 13:32:34 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/stack.h"
-#include "../../include/libraries.h"
+#include "libft.h"
 
-void ft_stack_addbck(t_stack *stack, t_node *node)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_node *last;
-
-	last = ft_stack_last(stack);
-	if (last == NULL)
-	{
-		stack->top = node;
+	if (!lst || !new)
 		return ;
-	}
-	last->next = node;
-	stack->size += 1;
-	
+	new->next = *lst;
+	*lst = new;
 }

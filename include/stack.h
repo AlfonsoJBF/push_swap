@@ -33,7 +33,7 @@ typedef struct s_stack
 
 t_stack	*ft_stack_create(void);
 t_node	*ft_stack_last(t_stack *stack);
-void	ft_stack_addbck(t_stack *stack, t_node *node );
+void	ft_stack_addback(t_stack *stack, t_node *node );
 void	ft_free_stack(t_stack *stack);
 
 
