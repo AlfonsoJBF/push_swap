@@ -24,4 +24,5 @@ void ft_stack_addfront(t_stack *stack, t_node *node)
 	}
 	node->next = stack->top;
 	stack->top = node;
+	stack->size++;
 }
