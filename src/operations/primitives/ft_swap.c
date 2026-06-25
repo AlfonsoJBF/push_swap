@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.h                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 19:49:20 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/25 19:49:20 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/25 22:22:52 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/25 22:22:52 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../../include/stack.h"
+#include "../../../include/libraries.h"
 
-#ifndef OPERATIONS_H
-# define OPERATIONS_H
-// PRIMITIVES
-void	ft_push(t_stack *from, t_stack *to);
-void	ft_swap(t_stack *stack);
-void	ft_rotate(t_stack *stack);
-void	ft_reverse_rotate(t_stack *stack);
+void	ft_swap(t_stack *stack)
+{
+	t_node *tmp;
 
-#endif
+	if (stack->top == NULL || stack->top->next == NULL)
+		return ;
+	tmp = ft_stack_pop(stack);
+	tmp->next = stack->top->next;
+	stack->top->next = tmp;
+	
+}
