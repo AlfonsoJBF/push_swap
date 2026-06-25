@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 02:21:13 by albustos          #+#    #+#             */
-/*   Updated: 2026/05/26 14:55:24 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/25 12:01:19 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 //Types
 int		ft_isalpha(int c);
@@ -76,5 +77,30 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// PRINTF 
+int		ft_printf(char const *format, ...);
+int		ft_putstring(char *string);
+int		ft_putnbr_base(int nbr, char *base);
+int		ft_putnbr_base_un(unsigned int nbr, char *base);
+int		ft_putnbr_base_ptr(unsigned long nbr, char *base);
+int		ft_putpointer(void *ptr);
+
+// GNL
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
+# endif
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+char	*get_next_line(int fd);
+size_t	ft_GNL_strlen(const char *str);
+char	*ft_GNL_strjoin(char const *s1, char const *s2);
+char	*ft_GNL_strchr(const char *s, int c);
+char	*ft_GNL_substr(char const *s, unsigned int start, size_t len);
+char	*ft_GNL_strdup(const char *s);
 
 #endif
