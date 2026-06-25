@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 02:21:13 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/25 12:01:19 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/25 13:41:52 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,10 +97,10 @@ int		ft_putpointer(void *ptr);
 # endif
 
 char	*get_next_line(int fd);
-size_t	ft_GNL_strlen(const char *str);
-char	*ft_GNL_strjoin(char const *s1, char const *s2);
-char	*ft_GNL_strchr(const char *s, int c);
-char	*ft_GNL_substr(char const *s, unsigned int start, size_t len);
-char	*ft_GNL_strdup(const char *s);
+size_t	ft_gnl_strlen(const char *str);
+char	*ft_gnl_strjoin(char const *s1, char const *s2);
+char	*ft_gnl_strchr(const char *s, int c);
+char	*ft_gnl_substr(char const *s, unsigned int start, size_t len);
+char	*ft_gnl_strdup(const char *s);
 
 #endif
