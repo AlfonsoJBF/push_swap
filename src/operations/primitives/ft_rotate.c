@@ -15,11 +15,11 @@
 
 void	ft_rotate(t_stack *stack)
 {
+	
+
 	t_node *tmp;
 
-	tmp = ft_stack_last(stack);
-	tmp->next = stack->top;
-	tmp = stack->top;
-	stack->top = tmp->next;
-	tmp->next = NULL;
+	tmp = ft_stack_pop(stack);
+	ft_stack_addback(stack, tmp);
+	
 }

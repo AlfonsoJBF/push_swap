@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:37:54 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/21 01:43:02 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/26 01:27:06 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_free_stack(t_stack *stack){
 
 	tmp = stack->top;
 	i = 0;
-	while (i <= stack->size)
+	while (i < stack->size)
 	{
 		tmp = tmp->next;
 		free(stack->top);

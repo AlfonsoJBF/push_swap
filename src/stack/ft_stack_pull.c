@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse_rotate.c                                :+:      :+:    :+:   */
+/*   ft_stack_pull.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 22:58:11 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/25 22:58:11 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/26 01:38:11 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/26 01:38:11 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/stack.h"
-#include "../../../include/libraries.h"
+#include "../../include/stack.h"
+#include "../../include/libraries.h"
 
-void	ft_reverse_rotate(t_stack *stack)
+t_node	*ft_stack_pull(t_stack *stack)
 {
+	t_node *current;
 	t_node *tmp;
-
-	tmp = ft_stack_pull(stack);
-	ft_stack_addfront(stack, tmp);
+	 
+	current = stack->top;
+	if (current == NULL)
+		return (NULL);
+	while(current->next->next != NULL)
+		current = current->next;
+	tmp = current->next;
+	current->next = NULL;
+	stack->size--;
+	return (tmp);
 }

@@ -22,5 +22,5 @@ void	ft_swap(t_stack *stack)
 	tmp = ft_stack_pop(stack);
 	tmp->next = stack->top->next;
 	stack->top->next = tmp;
-	
+	stack->size++;
 }
