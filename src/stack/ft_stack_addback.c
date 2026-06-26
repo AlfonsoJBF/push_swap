@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_addbck.c                                  :+:      :+:    :+:   */
+/*   ft_stack_addback.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:08:34 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/21 02:25:09 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/26 01:47:29 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ void ft_stack_addback(t_stack *stack, t_node *node)
 	if (last == NULL)
 	{
 		stack->top = node;
+		stack->size++;
 		return ;
 	}
 	last->next = node;
-	stack->size += 1;
+	node->next = NULL;
+	stack->size++;
 	
 }

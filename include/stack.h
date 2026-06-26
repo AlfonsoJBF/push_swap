@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 22:12:21 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/21 01:37:24 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/26 01:44:13 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,12 @@ typedef struct s_stack
 
 t_stack	*ft_stack_create(void);
 t_node	*ft_stack_last(t_stack *stack);
+t_node  *ft_stack_pop(t_stack *stack);
+t_node	*ft_stack_pull(t_stack *stack);
 void	ft_stack_addback(t_stack *stack, t_node *node );
+void    ft_stack_addfront(t_stack *stack, t_node *node);
 void	ft_free_stack(t_stack *stack);
+void	ft_stack_delete_node(t_stack *stack, t_node *node);
 
 
 #endif
