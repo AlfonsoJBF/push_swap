@@ -2,10 +2,10 @@
 
 
 # STACK ENGINE
-- [ ] Crear nodo
-- [ ] Crear stack
-- [ ] Añadir nodo al final del stack
-- [ ] Añadir nodo al inicio del stack
+- [x] Crear nodo
+- [x] Crear stack
+- [x] Añadir nodo al final del stack
+- [x] Añadir nodo al inicio del stack
 - [ ] Remover un nodo (si es uno intermedio el vincular el anterior con el siguiente)
 - [ ] Actualizar index del nodo
 - [ ] Actualizar posicion del nodo

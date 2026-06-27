@@ -36,7 +36,7 @@ BONUS_OBJ = $(patsubst src/%.c,$(OBJ_DIR)/%.o,$(BONUS_SRC))
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
 bonus: $(LIBFT) $(BONUS_OBJ)
 	$(CC) $(CFLAGS) $(BONUS_OBJ) $(LIBFT) -o $(BONUS_NAME)
