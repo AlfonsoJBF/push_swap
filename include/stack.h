@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 22:12:21 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/26 01:44:13 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/27 13:50:40 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ typedef struct s_node
 {
     int             value;
     int             index;
-    int             pos;
     int             target_pos;
     struct s_node   *next;
 }   t_node;
