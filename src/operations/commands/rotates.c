@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotates.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 17:19:49 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/27 17:20:30 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/29 02:54:06 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 #include "../../../include/operations.h"
 #include "../../../include/libraries.h"
 
-void	ra(t_stack *stack)
+void	ra(t_program *p)
 {
-	ft_rotate(stack);
-	write(1, "sa\n", 3);
+	ft_rotate(p->a);
+	write(1, "ra\n", 3);
 }
 
-void	rb(t_stack *stack)
+void	rb(t_program *p)
 {
-	ft_rotate(stack);
-	write(1, "sb\n", 3);
+	ft_rotate(p->b);
+	write(1, "rb\n", 3);
 }
 
-void	rr(t_stack *a, t_stack *b)
+void	rr(t_program *p)
 {
-	ft_rotate(a);
-	ft_rotate(b);
-	write(1, "ss\n", 3);
+	ft_rotate(p->a);
+	ft_rotate(p->b);
+	write(1, "rr\n", 3);
 }

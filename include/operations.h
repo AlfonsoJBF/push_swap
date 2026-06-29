@@ -23,17 +23,17 @@ void	ft_rotate(t_stack *stack);
 void	ft_reverse_rotate(t_stack *stack);
 
 // COMMANDS
-void	rra(t_stack *stack);
-void	rrb(t_stack *stack);
-void	rrr(t_stack *a, t_stack *b);
-void	ra(t_stack *stack);
-void	rb(t_stack *stack);
-void	rr(t_stack *a, t_stack *b);
-void	sa(t_stack *stack);
-void	sb(t_stack *stack);
-void	ss(t_stack *stack, t_stack *b);
-void	pa(t_stack *from, t_stack *to);
-void	pb(t_stack *from, t_stack *to);
+void	rra(t_program *p);
+void	rrb(t_program *p);
+void	rrr(t_program *p);
+void	ra(t_program *p);
+void	rb(t_program *p);
+void	rr(t_program *p);
+void	sa(t_program *p);
+void	sb(t_program *p);
+void	ss(t_program *p);
+void	pa(t_program *p);
+void	pb(t_program *p);
 
 
 #endif

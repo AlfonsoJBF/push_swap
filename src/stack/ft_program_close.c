@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.h                                            :+:      :+:    :+:   */
+/*   ft_program_close.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 02:14:36 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 02:14:36 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 02:24:25 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/29 02:24:25 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEBUG_H
-# define DEBUG_H
+#include "../../include/stack.h"
+#include "../../include/libraries.h"
 
-#include "stack.h"
-
-void	print_stack(t_stack *stack);
-void	print_program(t_program *p);
-
-#endif
+void	ft_program_close(t_program *p)
+{
+	if(!p)
+		return ;
+	ft_free_stack(p->a);
+	ft_free_stack(p->b);
+	free(p);
+}

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.h                                            :+:      :+:    :+:   */
+/*   print_program.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 02:14:36 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 02:14:36 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 02:31:15 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/29 02:31:15 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEBUG_H
-# define DEBUG_H
+#include "../../include/debug.h"
+#include "../../include/stack.h"
+#include "../../include/libraries.h"
 
-#include "stack.h"
-
-void	print_stack(t_stack *stack);
-void	print_program(t_program *p);
-
-#endif
+void	print_program(t_program *p)
+{
+	printf("{Tamaño de a: %d | Tamaño de b: %d}\n", p->a->size, p->b->size );
+	print_stack(p->a);
+	print_stack(p->b);
+}

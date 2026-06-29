@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.h                                            :+:      :+:    :+:   */
+/*   ft_program_init.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 02:14:36 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 02:14:36 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 02:18:05 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/29 02:18:05 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEBUG_H
-# define DEBUG_H
+#include "../../include/stack.h"
+#include "../../include/libraries.h"
 
-#include "stack.h"
+t_program	*ft_program_init(int *nums, int size)
+{
+	t_program *p;
 
-void	print_stack(t_stack *stack);
-void	print_program(t_program *p);
-
-#endif
+	if(!nums || !size)
+		return (NULL);
+	p = malloc(sizeof(t_program));
+	p->a = ft_stack_init(nums, size);
+	p->b = ft_stack_create();
+	return (p);
+}

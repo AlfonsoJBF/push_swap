@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 22:12:21 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/27 13:50:40 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/29 02:25:49 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_stack
 }   t_stack;
 
 t_stack	*ft_stack_create(void);
+t_stack	*ft_stack_init(int *nums, int size);
 t_node	*ft_stack_last(t_stack *stack);
 t_node  *ft_stack_pop(t_stack *stack);
 t_node	*ft_stack_pull(t_stack *stack);
@@ -39,5 +40,15 @@ void    ft_stack_addfront(t_stack *stack, t_node *node);
 void	ft_free_stack(t_stack *stack);
 void	ft_stack_delete_node(t_stack *stack, t_node *node);
 
+// PROGRAM
 
+typedef struct s_program
+{
+    t_stack *a;
+    t_stack *b;
+
+}   t_program;
+
+t_program	*ft_program_init(int *nums, int size);
+void	ft_program_close(t_program *p);
 #endif

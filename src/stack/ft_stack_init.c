@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.h                                            :+:      :+:    :+:   */
+/*   ft_init_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 02:14:36 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 02:14:36 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 02:11:36 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/29 02:11:36 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEBUG_H
-# define DEBUG_H
+#include "../../include/stack.h"
+#include "../../include/libraries.h"
 
-#include "stack.h"
-
-void	print_stack(t_stack *stack);
-void	print_program(t_program *p);
-
-#endif
+t_stack	*ft_stack_init(int *nums, int size)
+{	
+	t_stack *stack;
+	t_node *current;
+	int i = 0;
+	
+	stack = ft_stack_create();
+	while (i < size)
+	{
+		current = ft_node_create(nums[i]);
+		ft_stack_addback(stack, current);
+		i++;
+	}
+	return (stack);
+}
