@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   get_node_position.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/27 14:21:27 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/27 16:33:51 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 14:53:58 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/29 14:55:15 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/stack.h"
+#include "../../../include/stack.h"
 
-void	sort_three(t_stack *stack)
+int	get_node_position(t_stack *stack, t_node *node)
 {
-	t_node *current;
-	int a;
-	int b;
-	int c;
-	
+	t_node	*current;
+	int		i;
+
 	current = stack->top;
-	a = current->value;
-	current = current->next;
-	b = current->value;
-	current = current->next;
-	c = current->value;
+	i = 0;
+	while (current)
+	{
+		if (current == node)
+			return (i);
+		current = current->next;
+		i++;
+	}
+	return (-1);
 }

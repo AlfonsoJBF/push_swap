@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 12:09:23 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/29 15:03:35 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,12 +103,14 @@ int	main(int argc, char **argv)
 	int			*nums;
 	int			nums_size;
 	t_program	*p;
+	t_node	*min;
 
 	if (argc == 1)
 		return (0);
 	nums = NULL;
 	nums_size = 0;
-	if (!parse_args(argc, argv, &nums, &nums_size))
+	parse_args(argc, argv, &nums, &nums_size);
+	if (!nums)
 	{
 		write(2, "Error\n", 6);
 		return (1);
@@ -118,7 +120,9 @@ int	main(int argc, char **argv)
 	if (!p)
 		return (1);
 	print_program(p);
-	sort_five(p);
+	min = find_min(p->a);
+	printf("El valor minimo es: %d\n", min->value);
+	selection_sort(p);
 	print_program(p);
 	ft_program_close(p);
 	return (0);
