@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 22:12:21 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:34:02 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 01:11:46 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef struct s_node
     struct s_node   *next;
 }                   t_node;
 
-t_node *ft_node_create(int value);
+t_node  *ft_node_create(int value);
 
 // STACKS
 typedef struct s_stack
@@ -56,8 +56,9 @@ typedef struct s_stack
     int     size;
 }           t_stack;
 
-t_stack	*ft_stack_create(void);
+t_stack *ft_stack_create(void);
 t_stack	*ft_stack_init(int *nums, int size);
+t_node	*ft_node_find(t_stack *s, int value);
 t_node	*ft_stack_last(t_stack *stack);
 t_node  *ft_stack_pop(t_stack *stack);
 t_node	*ft_stack_pull(t_stack *stack);
@@ -77,8 +78,8 @@ typedef struct s_program
 }               t_program;
 
 t_program	*ft_program_init(int *nums, int size);
-void	ft_bench_init(t_program *p);
-void	ft_program_close(t_program *p);
+void        ft_bench_init(t_program *p);
+void        ft_program_close(t_program *p);
 
 
 #endif

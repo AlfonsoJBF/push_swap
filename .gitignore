@@ -1,2 +1,5 @@
 obj/
 args.txt
+err.txt
+res.txt
+k_sort.c
