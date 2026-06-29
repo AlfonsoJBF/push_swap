@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pushes.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 17:13:02 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/27 17:21:24 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/29 02:41:20 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 #include "../../../include/operations.h"
 #include "../../../include/libraries.h"
 
-void	pa(t_stack *from, t_stack *to)
+void	pa(t_program *p)
 {
-	ft_push(from, to);
+	ft_push(p->a, p->b);
 	write(1, "pa\n", 3);
 }
 
 
-void	pb(t_stack *from, t_stack *to)
+void	pb(t_program *p)
 {
-	ft_push(from, to);
+	ft_push(p->b, p->a);
 	write(1, "pb\n", 3);
 }
