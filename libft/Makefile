@@ -47,6 +47,8 @@ SRCS = ft_atoi.c \
 	ft_toupper.c \
 	ft_printf/ft_functions.c \
 	ft_printf/ft_printf.c \
+	ft_printf/ft_functions_error.c \
+	ft_printf/ft_printf_error.c \
 	GNL/get_next_line_bonus.c \
 	GNL/get_next_line_utils_bonus.c 
 
