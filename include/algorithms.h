@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotates.c                                  :+:      :+:    :+:   */
+/*   algorithms.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/27 17:20:51 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 11:00:46 by mtapiado         ###   ########.fr       */
+/*   Created: 2026/06/29 10:19:42 by mtapiado          #+#    #+#             */
+/*   Updated: 2026/06/29 12:55:36 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/stack.h"
-#include "../../../include/operations.h"
-#include "../../../include/libraries.h"
+#ifndef ALGORITHMS_H
+# define ALGORITHMS_H
 
-void	rra(t_program *p)
-{
-	ft_reverse_rotate(p->a);
-	write(1, "rra\n", 4);
-}
+# include "stack.h"
 
-void	rrb(t_program *p)
-{
-	ft_reverse_rotate(p->b);
-	write(1, "rrb\n", 4);
-}
+// simple sort
+void	sort_two(t_program *p);
+void	sort_three(t_program *p);
+void	sort_four(t_program *p);
+void	sort_five(t_program *p);
 
-void	rrr(t_program *p)
-{
-	ft_reverse_rotate(p->a);
-	ft_reverse_rotate(p->b);
-	write(1, "rrr\n", 4);
-}
-
+#endif
