@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/25 19:52:52 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/29 02:59:06 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,79 @@
 #include "../../include/libraries.h"
 #include "../../include/stack.h"
 #include "../../include/operations.h"
+#include "../../include/parse.h"
 #include <stdio.h>
 
-int main(void)
+int main(int argc, char **argv)
 {
-	int nums[] = {0, 64, 13, 10, 0};
-	int nums2[] = {10, 50, 60, 5, 6};
-	int i = 0;
-	t_node *current;
-	t_stack *a = ft_stack_create();
-	t_stack *b = ft_stack_create();
-	if (!a)
+	int *nums;
+	int nums_size;
+	t_program *p;
+
+	parse_args(argc, argv, &nums, &nums_size);
+	if(!nums || !nums_size)
+	{
+		write(1, "Error", 5);
 		return (1);
-	while (i < 5)
-	{
-		current = ft_node_create(nums[i]);
-		ft_stack_addback(a, current);
-		i++;
 	}
-	i = 0;
-	while (i < 5)
-	{
-		current = ft_node_create(nums2[i]);
-		ft_stack_addback(b, current);
-		i++;
-	}
+	p = ft_program_init(nums, nums_size);
+	if (!p)
+		return (1);
+	print_program(p);
+	pa(p);
+	print_program(p);
+	pa(p);
+	print_program(p);
+	pa(p);
+	print_program(p);
+	sa(p);
+	print_program(p);
+	ra(p);
+	print_program(p);
+	rra(p);
+	print_program(p);
+	pb(p);
+	print_program(p);
+	sb(p);
+	print_program(p);
+	rb(p);
+	print_program(p);
+	rrb(p);
+	print_program(p);
+	ss(p);
+	print_program(p);
+	rr(p);
+	print_program(p);
+	rrr(p);
+	print_program(p);
+	pb(p);
+	print_program(p);
+	pb(p);
+	pb(p);
+	print_program(p);
+	ft_program_close(p);
+	free(nums);
+	/* printf("{Tamaño de a: %d | Tamaño de b: %d}\n", a->size, b->size );
 	print_stack(a);
 	print_stack(b);
 	ft_push(a, b);
-	printf("----------------------------------");
+	printf("----------------------------------\n");
+	printf("{Tamaño de a: %d | Tamaño de b: %d}\n", a->size, b->size );
+	print_stack(a);
+	print_stack(b);
+	ft_swap(b);
+	ft_swap(a);
+	printf("----------------------------------\n");
+	printf("{Tamaño de a: %d | Tamaño de b: %d}\n", a->size, b->size );
+	print_stack(a);
+	print_stack(b);
+	ft_rotate(a);
+	ft_reverse_rotate(b);
+	printf("----------------------------------\n");
+	printf("{Tamaño de a: %d | Tamaño de b: %d}\n", a->size, b->size );
 	print_stack(a);
 	print_stack(b);
 	ft_free_stack(a);
-	ft_free_stack(b);
+	ft_free_stack(b); */
 	return (0);
 }
