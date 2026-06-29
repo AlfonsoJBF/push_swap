@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 02:21:13 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/25 13:41:52 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/29 18:46:03 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // PRINTF 
 int		ft_printf(char const *format, ...);
+int		ft_printf_error(char const *format, ...);
 int		ft_putstring(char *string);
 int		ft_putnbr_base(int nbr, char *base);
 int		ft_putnbr_base_un(unsigned int nbr, char *base);
 int		ft_putnbr_base_ptr(unsigned long nbr, char *base);
 int		ft_putpointer(void *ptr);
+int		ft_putstring_err(char *string);
+int		ft_putnbr_base_err(int nbr, char *base);
+int		ft_putnbr_base_un_err(unsigned int nbr, char *base);
+int		ft_putnbr_base_ptr_err(unsigned long nbr, char *base);
+int		ft_putpointer_err(void *ptr);
 
 // GNL
 

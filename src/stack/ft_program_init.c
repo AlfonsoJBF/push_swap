@@ -22,5 +22,6 @@ t_program	*ft_program_init(int *nums, int size)
 	p = malloc(sizeof(t_program));
 	p->a = ft_stack_init(nums, size);
 	p->b = ft_stack_create();
+	ft_bench_init(p);
 	return (p);
 }

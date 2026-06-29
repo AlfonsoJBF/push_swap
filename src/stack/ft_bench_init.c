@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushes.c                                           :+:      :+:    :+:   */
+/*   ft_bench_init.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/27 17:13:02 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:46:03 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 17:16:34 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/29 17:35:26 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stack.h"
+#include "libraries.h"
 
-#include "../../../include/stack.h"
-#include "../../../include/operations.h"
-#include "../../../include/libraries.h"
-
-void	pb(t_program *p)
+void	ft_bench_init(t_program *p)
 {
-	ft_push(p->a, p->b);
-	p->bench->total_ops++;
-	p->bench->metrics->pb++;
-	write(1, "pb\n", 3);
-}
-
-
-void	pa(t_program *p)
-{
-	ft_push(p->b, p->a);
-	p->bench->total_ops++;
-	p->bench->metrics->pa++;
-	write(1, "pa\n", 3);
+	t_benchmark *b;
+	
+	b = malloc(sizeof(t_benchmark));
+	if (!b)
+		return ;
+	b->metrics = malloc(sizeof(t_metrics));
+	if (!b->metrics)
+		return ;
+	b->total_ops = 0;
+	b->disorder = 0;
+	b->strategy = NULL;
+	p->bench = b;
 }

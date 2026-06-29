@@ -17,5 +17,6 @@
 
 void	print_stack(t_stack *stack);
 void	print_program(t_program *p);
+void	print_benchmark(t_benchmark *bench);
 
 #endif

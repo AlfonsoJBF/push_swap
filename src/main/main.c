@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 15:03:35 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/29 17:31:15 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ int	main(int argc, char **argv)
 	printf("El valor minimo es: %d\n", min->value);
 	selection_sort(p);
 	print_program(p);
+	print_benchmark(p->bench);
 	ft_program_close(p);
 	return (0);
 }
