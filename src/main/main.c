@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 14:58:22 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:26:17 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,36 +34,57 @@ void	solve_program(t_program *p, t_parse_opts *o)
 		print_benchmark(p->bench);
 }
 
+t_parse	*orchestate_parse(int argc, char **argv)
+{
+	t_parse			*parse;
+	t_parse_data	*pd;
+	t_parse_opts	*po;
+
+	parse = malloc(sizeof(t_parse));
+	if (!parse)
+		return (NULL);
+	pd = malloc(sizeof(t_parse_data));
+	if (!pd)
+		return (NULL);
+	po = malloc(sizeof(t_parse_opts));
+	if (!po)
+		return (NULL);
+	parse->data = pd;
+	parse->opts = po;
+	parse_args(argc, argv, pd, po);
+
+	return(parse);
+}
+
+void	free_parse(t_parse *parse)
+{
+	free(parse->data->array);
+	free(parse->data);
+	free(parse->opts);
+	free(parse);
+}
 
 int	main(int argc, char **argv)
 {
 	t_program		*p;
-	t_parse_data	*pd;
-	t_parse_opts	*po;
+	t_parse	*parse;
 
-	
-	pd = malloc(sizeof(t_parse_data));
-	if (!pd)
-		return (1);
-	po = malloc(sizeof(t_parse_opts));
-	if (!po)
-		return (1);
 	if (argc == 1)
 		return (0);
-	parse_args(argc, argv, pd, po);
-	if (!pd->array)
+	parse = orchestate_parse(argc, argv);
+	if (!parse->data->array)
 	{
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	p = ft_program_init(pd->array, pd->size);
+	p = ft_program_init(parse->data->array, parse->data->size);
 	if (!p)
 		return (1);
 	print_program(p);
-	calculate_index(pd->array, p->a);
-	solve_program(p, po);
+	calculate_index(parse->data->array, p->a);
+	solve_program(p, parse->opts);
 	ft_program_close(p);
-	free(pd);
-	free(po);
+	free_parse(parse);
+	
 	return (0);
 }

@@ -15,7 +15,7 @@
 #include "../../../include/algorithms.h"
 #include "../../../include/operations.h"
 
-/* static int my_sqrt(int n)
+static int my_sqrt(int n)
 {
     int x = n;
     int y = 1;
@@ -26,24 +26,23 @@
         y = n / x;
     }
     return (x);
-} */
+}
 
-static int get_k(int size)
+/* static int get_k(int size)
 {
     if (size <= 100)
         return (15);
     return (30);
-}
+} */
 
 void	k_sort(t_program *p)
 {
 	int k;
 	t_node *top;
 	int processed;
-	k = get_k(p->a->size);
 
+	k = my_sqrt(p->a->size);
 	processed = 0;
-
 	while (p->a->size > 0)
 	{
 		top = p->a->top;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:52:26 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/30 10:39:50 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:12:22 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ typedef struct s_parse_opts
 	int	strategy;
 	int	bench;
 }	t_parse_opts;
+
+typedef struct s_parse
+{
+	t_parse_data	*data;
+	t_parse_opts	*opts;
+}	t_parse;
 
 // parse_array.c
 
