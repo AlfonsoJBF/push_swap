@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:51:03 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/26 12:19:50 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/30 10:49:58 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,14 @@ int	*tokens_to_array(char **tokens, int size)
 	return (array);
 }
 
+static int	parse_array_error(t_parse_data *data)
+{
+	free(data->array);
+	data->array = NULL;
+	data->size = 0;
+	return (0);
+}
+
 int	has_duplicates(int *array, int size)
 {
 	int	i;
@@ -49,28 +57,27 @@ int	has_duplicates(int *array, int size)
 	return (0);
 }
 
-int	parse_args(int argc, char **argv, int **array, int *size)
+int	parse_args(int argc, char **argv, t_parse_data *data, t_parse_opts *opts)
 {
 	char	**tokens;
 
+	data->array = NULL;
+	data->size = 0;
 	tokens = get_tokens(argc, argv);
 	if (!tokens)
 		return (0);
-	if (!validate_numbers(tokens) || !validate_int_range(tokens))
+	if (!parse_flags(tokens, opts)
+		|| !validate_numbers(tokens) || !validate_int_range(tokens))
 	{
 		free_matrix(tokens);
 		return (0);
 	}
-	*size = count_tokens(tokens);
-	*array = tokens_to_array(tokens, *size);
+	data->size = count_tokens(tokens);
+	data->array = tokens_to_array(tokens, data->size);
 	free_matrix(tokens);
-	if (!*array)
+	if (!data->array)
 		return (0);
-	if (has_duplicates(*array, *size))
-	{
-		free(*array);
-		*array = NULL;
-		return (0);
-	}
+	if (has_duplicates(data->array, data->size))
+		return (parse_array_error(data));
 	return (1);
 }
