@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 13:49:28 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/30 14:44:19 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/30 17:48:04 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "../../../include/algorithms.h"
 #include "../../../include/operations.h"
 
-// static int	floor_sqrt(int size)
+// static int	get_chunk_size(int size)
 // {
 // 	int	i;
 
