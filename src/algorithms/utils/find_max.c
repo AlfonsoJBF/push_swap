@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   selection_sort.c                                   :+:      :+:    :+:   */
+/*   find_max.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 14:59:12 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 01:50:57 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/29 14:22:10 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/30 02:05:09 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/stack.h"
-#include "../../../include/operations.h"
-#include "../../../include/algorithms.h"
+#include <limits.h>
 
-void	selection_sort(t_program *p)
+
+t_node	*find_max(t_stack *stack)
 {
-	while (p->a->size > 0)
+	t_node	*current;
+	t_node	*max_node;
+
+	current = stack->top;
+	max_node = current;
+	while (current)
 	{
-		move_min_to_top_a(p);
-		pb(p);
+		if (current->value > max_node->value)
+			max_node = current;
+		current = current->next;
 	}
-	while(p->b->size > 0)
-		pa(p);
+	return (max_node);
 }

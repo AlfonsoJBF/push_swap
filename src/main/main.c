@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 01:31:15 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 02:16:56 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ int	main(int argc, char **argv)
 	calculate_index(nums, p->a);
 	min = find_min(p->a);
 	print_node(min);
-	selection_sort(p);
+	k_sort(p);
 	print_program(p);
 	print_benchmark(p->bench);
 	ft_program_close(p);
