@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:51:15 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/27 14:18:29 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/29 17:05:06 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ static int	count_total_tokens(int argc, char **argv)
 		if (!split)
 			return (-1);
 		if (split[0] == NULL)
+		{
+			free_matrix(split);
 			return (-1);
+		}
 		total += count_split_words(split);
 		free_matrix(split);
 		i++;
