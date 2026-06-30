@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:52:26 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/26 11:52:32 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/30 10:39:50 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,29 @@
 # include <limits.h>
 # include "libft.h"
 
+# define STRAT_SIMPLE 1
+# define STRAT_MEDIUM 2
+# define STRAT_COMPLEX 3
+# define STRAT_ADAPTIVE 4
+# define FLAG_BENCH 5
+
+// parse_structs
+typedef struct s_parse_data
+{
+	int	*array;
+	int	size;
+}	t_parse_data;
+
+typedef struct s_parse_opts
+{
+	int	strategy;
+	int	bench;
+}	t_parse_opts;
+
 // parse_array.c
 
-int		parse_args(int argc, char **argv, int **array, int *size);
+int		parse_args(int argc, char **argv, t_parse_data *data, t_parse_opts *opts);
+int		parse_flags(char **tokens, t_parse_opts *opts);
 int		has_duplicates(int *array, int size);
 int		*tokens_to_array(char **tokens, int size);
 
