@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 15:26:17 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:56:46 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@ void	solve_program(t_program *p, t_parse_opts *o)
 	if (o->strategy == 1)
 		selection_sort(p);
 	else if (o->strategy == 2)
-		ft_printf("Algoritmo --medium-- en proceso");
+		chunk_sort(p);
 	else if (o->strategy == 3)
 		k_sort(p);
 	else if (o->strategy == 4)
 		ft_printf("Algoritmo --adaptative-- en proceso");
-	
 	if(o->bench)
 		print_benchmark(p->bench);
 }
