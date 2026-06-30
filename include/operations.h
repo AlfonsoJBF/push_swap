@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
 
-#include "stack.h"
+# include "stack.h"
 
 // PRIMITIVES
 void	ft_push(t_stack *from, t_stack *to);
@@ -34,6 +33,5 @@ void	sb(t_program *p);
 void	ss(t_program *p);
 void	pa(t_program *p);
 void	pb(t_program *p);
-
 
 #endif
