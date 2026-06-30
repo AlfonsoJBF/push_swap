@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:31:15 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 02:16:56 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,15 +116,18 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	p = ft_program_init(nums, nums_size);
-	free(nums);
 	if (!p)
 		return (1);
 	print_program(p);
+	
+	
+	calculate_index(nums, p->a);
 	min = find_min(p->a);
-	printf("El valor minimo es: %d\n", min->value);
-	selection_sort(p);
+	print_node(min);
+	k_sort(p);
 	print_program(p);
 	print_benchmark(p->bench);
 	ft_program_close(p);
+	free(nums);
 	return (0);
 }

@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.h                                            :+:      :+:    :+:   */
+/*   ft_node_find.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/29 02:14:36 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 02:14:36 by albustos         ###   ########.fr       */
+/*   Created: 2026/06/30 00:45:35 by albustos          #+#    #+#             */
+/*   Updated: 2026/06/30 00:45:35 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEBUG_H
-# define DEBUG_H
+#include "../../include/stack.h"
+#include "../../include/libraries.h"
 
-#include "stack.h"
+t_node *ft_node_find(t_stack *s, int value)
+{
+    t_node *current;
 
-void	print_node(t_node *n);
-void	print_stack(t_stack *stack);
-void	print_program(t_program *p);
-void	print_benchmark(t_benchmark *bench);
-
-#endif
+    if (!s)
+        return NULL;
+    current = s->top;
+    while (current)
+    {
+        if (current->value == value)
+            return current;
+        current = current->next;
+    }
+    return NULL;
+}
