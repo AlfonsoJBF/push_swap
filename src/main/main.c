@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 16:02:34 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:56:46 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	solve_program(t_program *p, t_parse_opts *o)
 		p->bench->strategy = ft_strdup("Simple / O(n²)");
 	}
 	else if (o->strategy == 2)
-		ft_printf("Algoritmo --medium-- en proceso");
+		chunk_sort(p);
 	else if (o->strategy == 3)
 	{
 		k_sort(p);

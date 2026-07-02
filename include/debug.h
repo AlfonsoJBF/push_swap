@@ -13,7 +13,7 @@
 #ifndef DEBUG_H
 # define DEBUG_H
 
-#include "stack.h"
+# include "stack.h"
 
 void	print_node(t_node *n);
 void	print_stack(t_stack *stack);
