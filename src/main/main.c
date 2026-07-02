@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 15:26:17 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:02:34 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,19 @@ void	solve_program(t_program *p, t_parse_opts *o)
 {
 	ft_printf("Inicializando en modo: %d", o->strategy);
 	if (o->strategy == 1)
+	{
 		selection_sort(p);
+		p->bench->strategy = ft_strdup("Simple / O(n²)");
+	}
 	else if (o->strategy == 2)
 		ft_printf("Algoritmo --medium-- en proceso");
 	else if (o->strategy == 3)
+	{
 		k_sort(p);
+		p->bench->strategy = ft_strdup("Complex / O(n log n)");
+	}
 	else if (o->strategy == 4)
 		ft_printf("Algoritmo --adaptative-- en proceso");
-	
 	if(o->bench)
 		print_benchmark(p->bench);
 }
@@ -80,11 +85,9 @@ int	main(int argc, char **argv)
 	p = ft_program_init(parse->data->array, parse->data->size);
 	if (!p)
 		return (1);
-	print_program(p);
 	calculate_index(parse->data->array, p->a);
 	solve_program(p, parse->opts);
 	ft_program_close(p);
 	free_parse(parse);
-	
 	return (0);
 }

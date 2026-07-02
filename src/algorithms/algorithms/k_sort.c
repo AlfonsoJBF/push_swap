@@ -35,13 +35,16 @@ static int my_sqrt(int n)
     return (30);
 } */
 
+
+
+
 void	k_sort(t_program *p)
 {
 	int k;
 	t_node *top;
 	int processed;
 
-	k = my_sqrt(p->a->size);
+	k = 1.3 * my_sqrt(p->a->size);
 	processed = 0;
 	while (p->a->size > 0)
 	{

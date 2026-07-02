@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_benchmark.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 17:12:49 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:36:36 by albustos         ###   ########.fr       */
+/*   Updated: 2026/06/30 16:00:28 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@
 
 void	print_benchmark(t_benchmark *bench)
 {
-	ft_putstr_fd("[bench] disorder:   ", 2);
-	ft_putnbr_fd(bench->disorder, 2);
-	ft_putendl_fd("%", 2);
-	ft_putstr_fd("[bench] strategy:   ", 2);
-	ft_putendl_fd("pendiente", 2);
-	ft_putstr_fd("[bench] total_ops:   ", 2);
-	ft_putnbr_fd(bench->total_ops, 2);
-	ft_putendl_fd("", 2);
+	ft_printf_error("[bench] disorder:  %d%%\n",bench->disorder);
+	ft_printf_error("[bench] strategy:  %s\n",bench->strategy);
+	ft_printf_error("[bench] total_ops:  %d\n",bench->total_ops);
+
 }
