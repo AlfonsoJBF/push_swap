@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 16:56:46 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/03 02:56:04 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ void	solve_program(t_program *p, t_parse_opts *o)
 		p->bench->strategy = ft_strdup("Complex / O(n log n)");
 	}
 	else if (o->strategy == 4)
-		ft_printf("Algoritmo --adaptative-- en proceso");
+	{
+		adaptative_sort(p);
+		p->bench->strategy = ft_strdup("Adaptative / O(n log n)");
+	}
 	if(o->bench)
 		print_benchmark(p->bench);
 }
