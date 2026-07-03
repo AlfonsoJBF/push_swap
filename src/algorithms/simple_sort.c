@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 14:21:27 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 12:09:16 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/03 03:01:24 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/algorithms.h"
 #include "../../include/operations.h"
+#include "../../include/libraries.h"
+#include "../../include/stack.h"
 
 void	sort_two(t_program *p)
 {
@@ -25,6 +27,7 @@ void	sort_two(t_program *p)
 
 void	sort_three(t_program *p)
 {
+	printf("Sorting three elements\n");
 	int	a;
 	int	b;
 	int	c;

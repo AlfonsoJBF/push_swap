@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithms.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 10:19:42 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/30 16:55:20 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/03 02:55:12 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	sort_five(t_program *p);
 void	selection_sort(t_program *p);
 void	k_sort(t_program *p);
 void	chunk_sort(t_program *p);
+void	adaptative_sort(t_program *p);
 
 #endif
