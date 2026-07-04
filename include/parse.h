@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:52:26 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/30 17:12:54 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/04 23:14:04 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ typedef struct s_parse
 	t_parse_data	*data;
 	t_parse_opts	*opts;
 }	t_parse;
+
+
+// parse.c
+t_parse	*orchestate_parse(int argc, char **argv);
+void	free_parse(t_parse *parse);
 
 // parse_array.c
 
