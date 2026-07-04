@@ -14,12 +14,15 @@
 #include "../../include/libraries.h"
 
 t_stack	*ft_stack_init(int *nums, int size)
-{	
-	t_stack *stack;
-	t_node *current;
-	int i = 0;
-	
+{
+	t_stack	*stack;
+	t_node	*current;
+	int		i;
+
 	stack = ft_stack_create();
+	if (!stack)
+		return (NULL);
+	i = 0;
 	while (i < size)
 	{
 		current = ft_node_create(nums[i]);

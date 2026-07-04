@@ -15,6 +15,9 @@
 
 void	ft_stack_delete_node(t_stack *stack, t_node *node)
 {
+	t_node	*current;
+
+	current = stack->top;
 	if (stack == NULL || node == NULL)
 		return ;
 	if (stack->top == node)
@@ -23,7 +26,6 @@ void	ft_stack_delete_node(t_stack *stack, t_node *node)
 	}
 	else
 	{
-		t_node *current = stack->top;
 		while (current != NULL && current->next != node)
 		{
 			current = current->next;

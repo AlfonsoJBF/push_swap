@@ -13,18 +13,18 @@
 #include "../../include/stack.h"
 #include "../../include/libraries.h"
 
-t_node *ft_node_find(t_stack *s, int value)
+t_node	*ft_node_find(t_stack *s, int value)
 {
-    t_node *current;
+	t_node	*current;
 
-    if (!s)
-        return NULL;
-    current = s->top;
-    while (current)
-    {
-        if (current->value == value)
-            return current;
-        current = current->next;
-    }
-    return NULL;
+	if (!s)
+		return (NULL);
+	current = s->top;
+	while (current)
+	{
+		if (current->value == value)
+			return (current);
+		current = current->next;
+	}
+	return (NULL);
 }

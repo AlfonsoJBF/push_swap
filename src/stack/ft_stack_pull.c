@@ -15,13 +15,13 @@
 
 t_node	*ft_stack_pull(t_stack *stack)
 {
-	t_node *current;
-	t_node *tmp;
-	 
+	t_node	*current;
+	t_node	*tmp;
+
 	current = stack->top;
 	if (current == NULL)
 		return (NULL);
-	while(current->next->next != NULL)
+	while (current->next->next != NULL)
 		current = current->next;
 	tmp = current->next;
 	current->next = NULL;

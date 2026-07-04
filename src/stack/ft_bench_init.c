@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bench_init.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 17:16:34 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:35:26 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/04 23:17:42 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_bench_init(t_program *p)
 {
-	t_benchmark *b;
-	
+	t_benchmark	*b;
+
 	b = malloc(sizeof(t_benchmark));
 	if (!b)
 		return ;

@@ -15,9 +15,9 @@
 
 t_program	*ft_program_init(int *nums, int size)
 {
-	t_program *p;
+	t_program	*p;
 
-	if(!nums || !size)
+	if (!nums || !size)
 		return (NULL);
 	p = malloc(sizeof(t_program));
 	p->a = ft_stack_init(nums, size);

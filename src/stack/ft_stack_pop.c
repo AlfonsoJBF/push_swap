@@ -15,7 +15,7 @@
 
 t_node	*ft_stack_pop(t_stack *stack)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	tmp = stack->top;
 	if (tmp == NULL)
