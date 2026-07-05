@@ -16,7 +16,7 @@
 
 void	print_program(t_program *p)
 {
-	printf("{Tamaño de a: %d | Tamaño de b: %d}\n", p->a->size, p->b->size );
+	printf("{Tamaño de a: %d | Tamaño de b: %d}\n", p->a->size, p->b->size);
 	print_stack(p->a);
 	print_stack(p->b);
 }
