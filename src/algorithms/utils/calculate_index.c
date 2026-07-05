@@ -27,15 +27,15 @@ static int	*sort_array(int *values, int size)
 	if (!sorted)
 		return (NULL);
 	i = 0;
-	while (i < size)
-		sorted[i] = values[i++];
+	while (i++ < size)
+		sorted[i] = values[i];
 	i = 1;
 	while (i < size)
 	{
 		key = sorted[i];
 		j = i - 1;
-		while (j >= 0 && sorted[j] > key)
-			sorted[j + 1] = sorted[j--];
+		while (j-- >= 0 && sorted[j] > key)
+			sorted[j + 1] = sorted[j];
 		sorted[j + 1] = key;
 		i++;
 	}

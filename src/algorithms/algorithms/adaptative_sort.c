@@ -17,6 +17,8 @@
 
 static int	sort_by_size(t_program *p)
 {
+	if (p->bench->disorder == 0)
+		return (0);
 	if (p->a->size == 2)
 	{
 		sort_two(p);

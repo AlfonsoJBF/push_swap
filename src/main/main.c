@@ -17,7 +17,7 @@
 #include "../../include/parse.h"
 #include "../../include/stack.h"
 
-void	solve_program(t_program *p, t_parse_opts *o)
+static void	solve_program(t_program *p, t_parse_opts *o)
 {
 	if (o->strategy == 1)
 	{
@@ -25,7 +25,10 @@ void	solve_program(t_program *p, t_parse_opts *o)
 		p->bench->strategy = ft_strdup("Simple / O(n²)");
 	}
 	else if (o->strategy == 2)
+	{
 		chunk_sort(p);
+		p->bench->strategy = ft_strdup("Medium / O(n log n)");
+	}
 	else if (o->strategy == 3)
 	{
 		k_sort(p);
