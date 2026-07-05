@@ -15,57 +15,52 @@
 #include "../../../include/algorithms.h"
 #include "../../../include/operations.h"
 
-static int my_sqrt(int n)
+static int	my_sqrt(int n)
 {
-    int x = n;
-    int y = 1;
+	int	x;
+	int	y;
 
-    while (x > y)
-    {
-        x = (x + y) / 2;
-        y = n / x;
-    }
-    return (x);
+	x = n;
+	y = 1;
+	while (x > y)
+	{
+		x = (x + y) / 2;
+		y = n / x;
+	}
+	return (x);
 }
 
-/* static int get_k(int size)
+static void	return_to_a(t_program *p)
 {
-    if (size <= 100)
-        return (15);
-    return (30);
-} */
-
-
-
+	move_max_to_top_b(p);
+	pa(p);
+}
 
 void	k_sort(t_program *p)
 {
-	int k;
-	t_node *top;
-	int processed;
+	int		k;
+	t_node	*top;
+	int		processed;
 
 	k = 1.3 * my_sqrt(p->a->size);
 	processed = 0;
 	while (p->a->size > 0)
 	{
 		top = p->a->top;
-	    if (top->index <= processed)
-	    {
-	        pb(p);
-	        rb(p);
-	        processed++;
-	    }
-	    else if (top->index <= processed + k)
-	    {
-	        pb(p);
-	        processed++;
-	    }
-	    else
-	        ra(p);
+		if (top->index <= processed)
+		{
+			pb(p);
+			rb(p);
+			processed++;
+		}
+		else if (top->index <= processed + k)
+		{
+			pb(p);
+			processed++;
+		}
+		else
+			ra(p);
 	}
 	while (p->b->size > 0)
-	{
-		move_max_to_top_b(p);
-	    pa(p);
-	}
+		return_to_a(p);
 }
