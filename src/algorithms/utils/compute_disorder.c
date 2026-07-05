@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// 3 4 6 5 8 9 1 0 2 10
 #include "../../../include/stack.h"
 
 int	compute_disorder(t_stack *a)
@@ -32,5 +30,5 @@ int	compute_disorder(t_stack *a)
 		current = current->next->next;
 		i++;
 	}
-	return ( ((float)mistakes  / (a->size / 2)) * 10000 );
+	return (((float) mistakes / (a->size / 2)) * 10000);
 }

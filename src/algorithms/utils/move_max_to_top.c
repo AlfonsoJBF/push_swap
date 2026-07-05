@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_max_to_top.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:39:32 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 02:22:03 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:23:29 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	move_max_to_top_a(t_program *p)
 	max = find_max(p->a);
 	pos = get_node_position(p->a, max);
 	size = p->a->size;
-
 	if (pos <= size / 2)
 	{
 		while (p->a->top != max)
@@ -45,7 +44,6 @@ void	move_max_to_top_b(t_program *p)
 	max = find_max(p->b);
 	pos = get_node_position(p->b, max);
 	size = p->b->size;
-
 	if (pos <= size / 2)
 	{
 		while (p->b->top != max)
