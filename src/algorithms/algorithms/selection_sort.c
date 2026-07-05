@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   selection_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:59:12 by albustos          #+#    #+#             */
-/*   Updated: 2026/07/05 01:48:19 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 14:46:40 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	selection_sort(t_program *p)
 	{
 		min_pos = extreme_pos(p->a, 0);
 		max_pos = extreme_pos(p->a, 1);
-		if (cost_to_top(p->a, min_pos) <= cost_to_top(p->a, max_pos))
+		if (cost_to_top(p->a, min_pos) <= cost_to_top(p->a, max_pos) + 1)
 		{
 			move_pos_top_a(p, min_pos);
 			pb(p);
