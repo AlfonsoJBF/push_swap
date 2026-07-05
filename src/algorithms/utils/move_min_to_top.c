@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_min_to_top.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:39:32 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 14:56:33 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:24:03 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	move_min_to_top_a(t_program *p)
 	min = find_min(p->a);
 	pos = get_node_position(p->a, min);
 	size = p->a->size;
-
 	if (pos <= size / 2)
 	{
 		while (p->a->top != min)
@@ -45,7 +44,6 @@ void	move_min_to_top_b(t_program *p)
 	min = find_min(p->b);
 	pos = get_node_position(p->b, min);
 	size = p->b->size;
-
 	if (pos <= size / 2)
 	{
 		while (p->b->top != min)

@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   find_min.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:22:10 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 14:49:50 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:20:22 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/stack.h"
 #include <limits.h>
-
 
 t_node	*find_min(t_stack *stack)
 {
@@ -21,7 +20,6 @@ t_node	*find_min(t_stack *stack)
 
 	current = stack->top;
 	min_node = current;
-
 	while (current)
 	{
 		if (current->value < min_node->value)

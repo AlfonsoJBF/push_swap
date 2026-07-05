@@ -15,7 +15,7 @@
 
 void	ft_reverse_rotate(t_stack *stack)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	tmp = ft_stack_pull(stack);
 	ft_stack_addfront(stack, tmp);

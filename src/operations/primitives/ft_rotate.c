@@ -15,11 +15,8 @@
 
 void	ft_rotate(t_stack *stack)
 {
-	
-
-	t_node *tmp;
+	t_node	*tmp;
 
 	tmp = ft_stack_pop(stack);
 	ft_stack_addback(stack, tmp);
-	
 }

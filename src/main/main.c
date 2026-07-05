@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/07/04 23:16:20 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:31:34 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../libft/libft.h"
 #include "../../include/algorithms.h"
@@ -37,15 +36,14 @@ void	solve_program(t_program *p, t_parse_opts *o)
 		adaptative_sort(p);
 		p->bench->strategy = ft_strdup("Adaptative / O(n log n)");
 	}
-	if(o->bench)
+	if (o->bench)
 		print_benchmark(p->bench);
 }
-
 
 int	main(int argc, char **argv)
 {
 	t_program		*p;
-	t_parse	*parse;
+	t_parse			*parse;
 
 	if (argc == 1)
 		return (0);

@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   pushes.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 17:13:02 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:46:03 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:33:56 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../../include/stack.h"
 #include "../../../include/operations.h"
@@ -22,7 +21,6 @@ void	pb(t_program *p)
 	p->bench->metrics->pb++;
 	write(1, "pb\n", 3);
 }
-
 
 void	pa(t_program *p)
 {

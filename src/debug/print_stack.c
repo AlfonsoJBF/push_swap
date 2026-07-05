@@ -13,27 +13,26 @@
 #include "../../include/libraries.h"
 #include "../../include/stack.h"
 
-void print_stack(t_stack *stack)
+void	print_stack(t_stack *stack)
 {
-    t_node *tmp;
+	t_node	*tmp;
 
-    if (!stack)
-    {
-        printf("stack is NULL\n");
-        return;
-    }
-
-    tmp = stack->top;
-    printf("[");
-    while (tmp)
-    {
+	if (!stack)
+	{
+		printf("stack is NULL\n");
+		return ;
+	}
+	tmp = stack->top;
+	printf("[");
+	while (tmp)
+	{
 		if (tmp->next == NULL)
 		{
-        printf(" %d ", tmp->value);
-		break ;
+			printf(" %d ", tmp->value);
+			break ;
 		}
-        printf(" %d,", tmp->value);
-        tmp = tmp->next;
-    }
-    printf("]\n");
+		printf(" %d,", tmp->value);
+		tmp = tmp->next;
+	}
+	printf("]\n");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:52:26 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/07/04 23:14:04 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 14:55:40 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,13 @@ typedef struct s_parse
 	t_parse_opts	*opts;
 }	t_parse;
 
-
 // parse.c
 t_parse	*orchestate_parse(int argc, char **argv);
 void	free_parse(t_parse *parse);
 
 // parse_array.c
 
-int		parse_args(int argc, char **argv, t_parse_data *data, t_parse_opts *opts);
+int		p_args(int argc, char **argv, t_parse_data *data, t_parse_opts *opts);
 int		parse_flags(char **tokens, t_parse_opts *opts);
 int		has_duplicates(int *array, int size);
 int		*tokens_to_array(char **tokens, int size);

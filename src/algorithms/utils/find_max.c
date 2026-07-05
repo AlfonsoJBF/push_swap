@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   find_max.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:22:10 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 02:05:09 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:22:31 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/stack.h"
 #include <limits.h>
-
 
 t_node	*find_max(t_stack *stack)
 {
