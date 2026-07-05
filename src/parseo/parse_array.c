@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/26 11:51:03 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/30 10:49:58 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/05 14:55:49 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	has_duplicates(int *array, int size)
 	return (0);
 }
 
-int	parse_args(int argc, char **argv, t_parse_data *data, t_parse_opts *opts)
+int	p_args(int argc, char **argv, t_parse_data *data, t_parse_opts *opts)
 {
 	char	**tokens;
 

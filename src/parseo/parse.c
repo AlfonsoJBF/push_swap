@@ -29,7 +29,7 @@ t_parse	*orchestate_parse(int argc, char **argv)
 		return (NULL);
 	parse->data = pd;
 	parse->opts = po;
-	parse_args(argc, argv, pd, po);
+	p_args(argc, argv, pd, po);
 
 	return(parse);
 }
