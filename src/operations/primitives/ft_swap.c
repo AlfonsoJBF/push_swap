@@ -15,7 +15,7 @@
 
 void	ft_swap(t_stack *stack)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	if (stack->top == NULL || stack->top->next == NULL)
 		return ;

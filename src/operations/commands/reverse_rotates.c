@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotates.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 17:20:51 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/29 17:46:22 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:34:06 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	rrr(t_program *p)
 	p->bench->metrics->rrr++;
 	write(1, "rrr\n", 4);
 }
-
