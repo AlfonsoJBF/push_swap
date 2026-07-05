@@ -15,7 +15,7 @@
 
 void	ft_program_close(t_program *p)
 {
-	if(!p)
+	if (!p)
 		return ;
 	ft_free_stack(p->a);
 	ft_free_stack(p->b);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_node_create.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 22:43:36 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/20 22:47:45 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/04 23:18:49 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 t_node	*ft_node_create(int value)
 {
-	t_node *new;
+	t_node	*new;
 
 	new = malloc (sizeof(t_node));
 	if (!new)

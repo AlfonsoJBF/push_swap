@@ -6,14 +6,15 @@
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:37:54 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/26 01:27:06 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/04 23:18:18 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/stack.h"
 #include "../../include/libraries.h"
 
-void	ft_free_stack(t_stack *stack){
+void	ft_free_stack(t_stack *stack)
+{
 	t_node	*tmp;
 	int		i;
 

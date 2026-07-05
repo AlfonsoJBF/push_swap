@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   selection_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:59:12 by albustos          #+#    #+#             */
-/*   Updated: 2026/07/01 18:46:29 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/05 01:48:19 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
