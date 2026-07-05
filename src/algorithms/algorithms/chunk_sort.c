@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   chunk_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 13:49:28 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/07/01 18:18:12 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/05 14:43:57 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ static void	push_chunks_to_b(t_program *p, int size, int chunk)
 		{
 			push_chunk_node(p, index, limit, chunk);
 			pushed++;
-			if (pushed == limit - (chunk/4) && limit < size)
+			if (pushed == limit && limit < size)
 			{
 				limit += chunk;
 				if (limit > size)
@@ -94,18 +94,10 @@ void	chunk_sort(t_program *p)
 {
 	int	size;
 	int	chunk;
-	int	i;
 
-	i = 0;
 	size = p->a->size;
 	chunk = get_chunk_size(size);
 	push_chunks_to_b(p, size, chunk);
-	while (i < 2)
-	{
-		move_max_to_top_b(p);
-		pa(p);
-		i++;
-	}
 	while (p->b->size > 0)
 	{
 		move_max_to_top_b(p);
