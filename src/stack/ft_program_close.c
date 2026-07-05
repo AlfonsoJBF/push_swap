@@ -20,6 +20,7 @@ void	ft_program_close(t_program *p)
 	ft_free_stack(p->a);
 	ft_free_stack(p->b);
 	free(p->bench->metrics);
+	free(p->bench->strategy);
 	free(p->bench);
 	free(p);
 }

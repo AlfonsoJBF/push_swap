@@ -44,7 +44,7 @@ void	k_sort(t_program *p)
 
 	k = 1.3 * my_sqrt(p->a->size);
 	processed = 0;
-	while (p->a->size > 0)
+	while (p->a->size > 0 && p->bench->disorder != 0)
 	{
 		top = p->a->top;
 		if (top->index <= processed)

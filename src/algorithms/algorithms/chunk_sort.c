@@ -95,6 +95,8 @@ void	chunk_sort(t_program *p)
 	int	size;
 	int	chunk;
 
+	if (p->bench->disorder == 0)
+		return ;
 	size = p->a->size;
 	chunk = get_chunk_size(size);
 	push_chunks_to_b(p, size, chunk);

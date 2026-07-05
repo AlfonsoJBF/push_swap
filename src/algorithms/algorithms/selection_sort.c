@@ -87,6 +87,8 @@ void	selection_sort(t_program *p)
 	int	min_pos;
 	int	max_pos;
 
+	if (p->bench->disorder == 0)
+		return ;
 	while (p->a->size > 0)
 	{
 		min_pos = extreme_pos(p->a, 0);
