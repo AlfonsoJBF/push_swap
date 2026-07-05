@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 14:21:27 by albustos          #+#    #+#             */
-/*   Updated: 2026/07/03 03:22:49 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:14:36 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,53 +46,6 @@ void	sort_three(t_program *p)
 		sa(p);
 }
 
-static int	find_min_pos(t_stack *stack)
-{
-	t_node	*current;
-	int		min;
-	int		pos;
-	int		min_pos;
-
-	current = stack->top;
-	min = current->value;
-	pos = 0;
-	min_pos = 0;
-	while (current)
-	{
-		if (current->value < min)
-		{
-			min = current->value;
-			min_pos = pos;
-		}
-		current = current->next;
-		pos++;
-	}
-	return (min_pos);
-}
-
-static void	move_min_to_top(t_program *p)
-{
-	int	min_pos;
-
-	min_pos = find_min_pos(p->a);
-	if (min_pos <= p->a->size / 2)
-	{
-		while (min_pos > 0)
-		{
-			ra(p);
-			min_pos--;
-		}
-	}
-	else
-	{
-		while (min_pos < p->a->size)
-		{
-			rra(p);
-			min_pos++;
-		}
-	}
-}
-
 void	sort_four(t_program *p)
 {
 	if (!p || !p->a || !p->b || p->a->size != 4)
@@ -101,7 +54,7 @@ void	sort_four(t_program *p)
 		return ;
 	if (!p->a->top->next->next || !p->a->top->next->next->next)
 		return ;
-	move_min_to_top(p);
+	move_min_to_top_a(p);
 	pb(p);
 	sort_three(p);
 	pa(p);
@@ -117,9 +70,9 @@ void	sort_five(t_program *p)
 		return ;
 	if (!p->a->top->next->next->next->next)
 		return ;
-	move_min_to_top(p);
+	move_min_to_top_a(p);
 	pb(p);
-	move_min_to_top(p);
+	move_min_to_top_a(p);
 	pb(p);
 	sort_three(p);
 	pa(p);
