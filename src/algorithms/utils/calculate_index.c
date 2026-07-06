@@ -14,12 +14,31 @@
 #include "../../../include/libraries.h"
 #include "../../../include/algorithms.h"
 
+static void	insertion_sort(int *sorted, int size)
+{
+	int	i;
+	int	j;
+	int	key;
+
+	i = 1;
+	while (i < size)
+	{
+		key = sorted[i];
+		j = i - 1;
+		while (j >= 0 && sorted[j] > key)
+		{
+			sorted[j + 1] = sorted[j];
+			j--;
+		}
+		sorted[j + 1] = key;
+		i++;
+	}
+}
+
 static int	*sort_array(int *values, int size)
 {
 	int	*sorted;
 	int	i;
-	int	j;
-	int	key;
 
 	if (!values || !size)
 		return (NULL);
@@ -27,18 +46,12 @@ static int	*sort_array(int *values, int size)
 	if (!sorted)
 		return (NULL);
 	i = 0;
-	while (i++ < size)
-		sorted[i] = values[i];
-	i = 1;
 	while (i < size)
 	{
-		key = sorted[i];
-		j = i - 1;
-		while (j-- >= 0 && sorted[j] > key)
-			sorted[j + 1] = sorted[j];
-		sorted[j + 1] = key;
+		sorted[i] = values[i];
 		i++;
 	}
+	insertion_sort(sorted, size);
 	return (sorted);
 }
 
