@@ -20,8 +20,11 @@ t_program	*ft_program_init(int *nums, int size)
 	if (!nums || !size)
 		return (NULL);
 	p = malloc(sizeof(t_program));
+	if (!p)
+		return (NULL);
 	p->a = ft_stack_init(nums, size);
 	p->b = ft_stack_create();
+	p->print_ops = 1;
 	ft_bench_init(p);
 	return (p);
 }
