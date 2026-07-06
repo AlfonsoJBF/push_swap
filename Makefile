@@ -24,10 +24,14 @@ OBJ_DIR     = obj
 SRC = $(shell find src -type f -name "*.c" ! -path "src/checker_bonus/*")
 
 # Solo bonus
-BONUS_SRC = $(shell test -d src/checker_bonus && find src/checker_bonus -type f -name "*.c" || true)
+BONUS_DIR = src_bonus/src_bonus
+BONUS_COMMON_SRC = $(shell find src -type f -name "*.c" ! -name "main.c")
+BONUS_SRC = $(shell test -d $(BONUS_DIR) && find $(BONUS_DIR) -type f -name "*.c" || true)
+
 # Objetos
 OBJ = $(patsubst src/%.c,$(OBJ_DIR)/%.o,$(SRC))
-BONUS_OBJ = $(patsubst src/%.c,$(OBJ_DIR)/%.o,$(BONUS_SRC))
+BONUS_COMMON_OBJ = $(patsubst src/%.c,$(OBJ_DIR)/%.o,$(BONUS_COMMON_SRC))
+BONUS_OBJ = $(patsubst $(BONUS_DIR)/%.c,$(OBJ_DIR)/bonus/%.o,$(BONUS_SRC))
 
 # **************************************************************************** #
 #                                    RULES                                     #
@@ -38,8 +42,8 @@ all: $(NAME)
 $(NAME): $(LIBFT) $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
-bonus: $(LIBFT) $(BONUS_OBJ)
-	$(CC) $(CFLAGS) $(BONUS_OBJ) $(LIBFT) -o $(BONUS_NAME)
+bonus: $(LIBFT) $(BONUS_COMMON_OBJ) $(BONUS_OBJ)
+	$(CC) $(CFLAGS) $(BONUS_COMMON_OBJ) $(BONUS_OBJ) $(LIBFT) -o $(BONUS_NAME)
 
 # Compilar libft
 $(LIBFT):
@@ -50,6 +54,9 @@ $(LIBFT):
 	fi
 # Compilar objetos manteniendo estructura
 $(OBJ_DIR)/%.o: src/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+$(OBJ_DIR)/bonus/%.o: $(BONUS_DIR)/%.c
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
