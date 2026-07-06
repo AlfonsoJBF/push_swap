@@ -6,7 +6,7 @@
 /*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 10:19:42 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/07/04 22:03:46 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/06 15:06:19 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	move_max_to_top_a(t_program *p);
 void	move_max_to_top_b(t_program *p);
 int		get_node_position(t_stack *stack, t_node *node);
 int		calculate_index(int *nums, t_stack *s);
-int		compute_disorder(t_stack *a);
+int	    compute_disorder(t_stack *a);
 
 // simple sort
 void	sort_two(t_program *p);
