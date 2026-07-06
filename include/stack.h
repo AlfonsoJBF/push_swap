@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/20 22:12:21 by albustos          #+#    #+#             */
-/*   Updated: 2026/06/30 17:21:25 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/06 11:46:32 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ typedef struct s_program
 	t_stack		*a;
 	t_stack		*b;
 	t_benchmark	*bench;
+	int			print_ops;
 }	t_program;
 
 t_program	*ft_program_init(int *nums, int size);
