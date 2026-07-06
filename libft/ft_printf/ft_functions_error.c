@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_functions_error.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 11:54:52 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/29 18:44:05 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/06 15:26:59 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_putnbr_base_err(int nbr, char *base)
 	}
 	if (l >= (long)ft_strlen(base))
 		count = count + ft_putnbr_base_err(l / ft_strlen(base), base);
-	ft_putchar_fd(base[(l % ft_strlen(base))], 1);
+	ft_putchar_fd(base[(l % ft_strlen(base))], 2);
 	count++;
 	return (count);
 }

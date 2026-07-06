@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
+/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 01:22:22 by albustos          #+#    #+#             */
-/*   Updated: 2026/07/06 13:16:12 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/07/06 15:51:35 by albustos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	parse = orchestate_parse(argc, argv);
-	if (!parse->data->array)
+	if (!parse)
 	{
 		write(2, "Error\n", 6);
 		return (1);
