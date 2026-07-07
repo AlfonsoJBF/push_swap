@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_error.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albustos <albustos@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:12:12 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/07/06 15:25:34 by albustos         ###   ########.fr       */
+/*   Updated: 2026/07/07 11:28:37 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static int	ft_format(char c, va_list args)
 	else if (c == 'd' || c == 'i')
 		return (ft_putnbr_base_err(va_arg(args, int), "0123456789"));
 	else if (c == 'u')
-		return (ft_putnbr_base_un_err(va_arg(args, unsigned int), "0123456789"));
+		return (ft_putnbr_base_un_err
+			(va_arg(args, unsigned int), "0123456789"));
 	else if (c == 'x')
 		return (ft_putnbr_base_un_err(va_arg(args, unsigned int),
 				"0123456789abcdef"));
