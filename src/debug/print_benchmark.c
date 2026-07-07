@@ -34,5 +34,5 @@ void	print_benchmark(t_benchmark *bench)
 	ft_printf_error("[bench] ra:  %d rb:  %d  rr:  %d  ",
 		bench->metrics->ra, bench->metrics->rb, bench->metrics->rr);
 	ft_printf_error("rra:  %d rrb:  %d rrr:  %d \n",
-		bench->metrics->rra, bench->metrics->rrb, bench->metrics->rrb);
+		bench->metrics->rra, bench->metrics->rrb, bench->metrics->rrr);
 }
