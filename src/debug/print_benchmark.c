@@ -28,4 +28,11 @@ void	print_benchmark(t_benchmark *bench)
 	print_disorder(bench->disorder);
 	ft_printf_error("[bench] strategy:  %s \n", bench->strategy);
 	ft_printf_error("[bench] total_ops:  %d \n", bench->total_ops);
+	ft_printf_error("[bench] sa:  %d sb:  %d  ss:  %d  pa:  %d pb:  %d \n",
+		bench->metrics->sa, bench->metrics->sb, bench->metrics->ss,
+		bench->metrics->pa, bench->metrics->pb);
+	ft_printf_error("[bench] ra:  %d rb:  %d  rr:  %d  ",
+		bench->metrics->ra, bench->metrics->rb, bench->metrics->rr);
+	ft_printf_error("rra:  %d rrb:  %d rrr:  %d \n",
+		bench->metrics->rra, bench->metrics->rrb, bench->metrics->rrb);
 }
