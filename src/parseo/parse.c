@@ -30,8 +30,8 @@ t_parse	*orchestate_parse(int argc, char **argv)
 	parse->data = pd;
 	parse->opts = po;
 	p_args(argc, argv, pd, po);
-	if(!parse->data->array)
-		return(free_parse(parse), NULL);
+	if (!parse->data->array)
+		return (free_parse(parse), NULL);
 	return (parse);
 }
 
@@ -44,5 +44,5 @@ void	free_parse(t_parse *parse)
 	free(parse->opts);
 	parse->opts = NULL;
 	free(parse);
-	parse= NULL;
+	parse = NULL;
 }
